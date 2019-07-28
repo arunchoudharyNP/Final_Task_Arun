@@ -6,7 +6,7 @@ function header1(){
 
 function footer1(){
 
-    var footerText ='<footer class="dark_grey_bg"><div class="container flex-sb-c pad-t-b-20-30"> <span class="grey-light"> <span class="grey">&copy; copyright 2016 by</span> Center for Science and Environment. All Rights Reserved</span><div> <a href="#"><i class="icons8-facebook"></i></a> <a href="#"><i class="icons8-facebook"></i></a> <a href="#"><i class="icons8-facebook"></i></a> <a href="#"><i class="icons8-facebook"></i></a> <a href="#"><i class="icons8-facebook"></i></a></footer>';
+    var footerText ='<footer class="dark_grey_bg"><div class="container flex-sb-c pad-t-b-20-30"> <span class="grey-light"> <span class="grey">&copy; copyright 2016 by</span> Center for Science and Environment. All Rights Reserved</span><div> <a href="#"><i class="icons8-facebook"></i></a> <a href="#"><img src="icon/icons8-twitter-circled-24.png" alt="twitter"></a> <a href="#"><img src="icon/icons8-linkedin-circled-24.png" alt="icons8-linkedin-circled-24"></a> <a href="#"><img src="icon/icons8-google-plus-24.png" alt="icons8-google-plus-24"></a> <a href="#"><img src="icon/icons8-pinterest-24.png" alt="icons8-pinterest-24"></a></div></footer>';
 
     document.write(footerText);
 }
