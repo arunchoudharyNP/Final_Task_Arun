@@ -38,7 +38,7 @@
                 <div class="form max-width-740 ">
 
                     <h1 class="heading ">
-                       <span class="grey"> PROVIDE YOUR </span>  <SPan class="f-w-900 black" >DETAILS</SPan>
+                        <span class="grey"> PROVIDE YOUR </span> <SPan class="f-w-900 black">DETAILS</SPan>
                     </h1>
 
                     <form id="userDetail">
@@ -48,8 +48,17 @@
                         <input class=" color-1 width-330 h-50 mar-t-24 mar-l-40 " type="text" name="" id=""
                             placeholder="MOBILE">
 
-                        <input class="form-bg width-330 h-50 mar-t-24 " type="text" name="" id=""
-                            placeholder="AGE                                                  &#8964;">
+                        <input list="AGE" class="form-bg width-330 h-50 mar-t-24 " type="text" name="" id=""
+                            placeholder="AGE">
+                        <datalist id="AGE">
+                            <option value="0-10">
+                            <option value="10-20">
+                            <option value="20-30">
+                            <option value="30-40">
+                            <option value="50 Above">
+                        </datalist>
+
+
 
 
 
@@ -64,18 +73,44 @@
 
                         </div>
 
-                        <input class=" form-bg  width-330 h-50  mar-t-24 " type="text" name="" id=""
-                            placeholder="SELECT YOUR COUNTRY               &#8964;">
+                        <input list="country" class=" form-bg  width-330 h-50  mar-t-24 " type="text" name="" id=""
+                            placeholder="SELECT YOUR COUNTRY">
+                        <datalist id="country">
+                            <option value="India">
+                        </datalist>
 
 
-                        <input class=" form-bg  width-330 h-50  mar-t-24 mar-l-40 " type="text" name="" id=""
-                            placeholder="SELECT STATE                                 &#8964;">
+                        <input list="state" class=" form-bg  width-330 h-50  mar-t-24 mar-l-40 " type="text" name=""
+                            id="" placeholder="SELECT STATE">
+                        <datalist id="state">
 
-                        <input class=" form-bg  width-330 h-50  mar-t-24  " type="text" name="" id=""
-                            placeholder="CITY                                                   &#8964;">
+                            <option value="UP">
+                            <option value="Kerela">
+                            <option value="Goa">
+                            <option value="Haryana">
+                            <option value="Gujrat">
+                        </datalist>
 
-                        <input class=" form-bg  width-330 h-50  mar-t-24 mar-l-40 " type="text" name="" id=""
-                            placeholder="HOUSEHOLD TYPE                         &#8964;">
+                        <input list="city" class=" form-bg  width-330 h-50  mar-t-24  " type="text" name="" id=""
+                            placeholder="CITY">
+                        <datalist id="city">
+                            <option value="Ghaziabad">
+                            <option value="Agra">
+                            <option value="Lucknow">
+                            <option value="Kanpur">
+                            <option value="Noida">
+                        </datalist>
+
+
+                        <input list="houseType" class=" form-bg  width-330 h-50  mar-t-24 mar-l-40 " type="text" name=""
+                            id="" placeholder="HOUSEHOLD TYPE ">
+                        <datalist id="houseType">
+                            <option value="Couple with children">
+                            <option value="Couple without children">
+                            <option value="Single">
+                            <option value="One parent family">
+                            <option value="Other family">
+                        </datalist>
 
 
                         <input id="continueBtn" class="width-100p h-50 mar-t-50 blue-bg text_white " type="submit"
@@ -129,27 +164,40 @@
                     var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
 
                     number = $(element).val();
+
+
                     if (index == 1) {
 
-
                         if (filter.test(number)) {
-                            $("#userDetail").attr("action", "/Final_Task_Arun/screen2.html")
-                            return true;
-
+                            return true
                         }
                         else {
-
-
-                            alert("number should be 10 digits and integer only")
-
-
+                            alert("Number should be Only 10 digits and numeric only");
+                            return false;
                         }
                     }
+
+                    if (number == "") {
+                        var id = $(this).attr("placeholder");
+                        alert(id + " can not be blank")
+                        return false;
+
+                    }
+
+                    if (index == 6) {
+                        $("#userDetail").attr("action", "/Final_Task_Arun/screen2.html")
+
+                    }
+
+
+                    // $("#userDetail").attr("action", "/Final_Task_Arun/screen2.html")
 
 
                 })
 
 
+
+                // $("#userDetail").attr("action", "/Final_Task_Arun/screen2.html")
 
             })
 
